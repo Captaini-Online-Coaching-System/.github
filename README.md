@@ -19,12 +19,9 @@
 
 ### A two-sided sports coaching marketplace — AI-matched coaches, seamless booking, verified payments, and auto-generated performance reports, all in one platform.
 
-🌐 **Live Website**: [captaini.vercel.app](https://captaini.vercel.app)  &nbsp;|&nbsp;  🔌 **Live API**: [captaini-api.runasp.net](http://captaini-api.runasp.net)
-
+🌐 **Live Website**: [captaini.vercel.app](https://captaini.vercel.app)  &nbsp;|&nbsp;  
 <br/><br/>
-
-<!-- Add your demo video here — paste the GitHub video asset link below -->
-https://github.com/user-attachments/assets/YOUR_VIDEO_ASSET_ID_HERE
+<img width="1915" height="808" alt="Screenshot from 2026-09-22 16-42-08" src="https://github.com/user-attachments/assets/b6ae2cb4-fc1a-42b5-bdbc-afae553fbe6f" />
 
 <br/>
 
