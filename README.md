@@ -26,7 +26,11 @@
 🌐 **Live Website**: [captaini.vercel.app](https://captaini.vercel.app)  &nbsp;|&nbsp;  
 <br/><br/>
 
-https://github.com/user-attachments/assets/71d5a874-8094-4d92-873f-11aaa2ccfeef
+
+
+https://github.com/user-attachments/assets/6d3d23d1-aa7f-47f8-a6a1-7fa7e93582d8
+
+
 
 
 <br/>
