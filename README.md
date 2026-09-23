@@ -1,3 +1,7 @@
+
+
+
+
 # 🏆 Captaini - AI-Powered Sports Coaching Marketplace
 
 <div align="center">
@@ -21,7 +25,9 @@
 
 🌐 **Live Website**: [captaini.vercel.app](https://captaini.vercel.app)  &nbsp;|&nbsp;  
 <br/><br/>
-<img width="1915" height="808" alt="Screenshot from 2026-09-22 16-42-08" src="https://github.com/user-attachments/assets/b6ae2cb4-fc1a-42b5-bdbc-afae553fbe6f" />
+
+https://github.com/user-attachments/assets/71d5a874-8094-4d92-873f-11aaa2ccfeef
+
 
 <br/>
 
