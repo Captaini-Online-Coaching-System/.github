@@ -1,7 +1,3 @@
-
-
-
-
 # 🏆 Captaini - AI-Powered Sports Coaching Marketplace
 
 <div align="center">
@@ -49,7 +45,7 @@ https://github.com/user-attachments/assets/6d3d23d1-aa7f-47f8-a6a1-7fa7e93582d8
 | Trainees pick coaches blindly | ✅ AI matching on goals, personality, sport & availability |
 | Manual scheduling via chats & calls | ✅ Integrated booking with confirmations & reminders |
 | No progress insight | ✅ AI-generated PDF performance reports per trainee |
-| Payments handled off-platform | ✅ Paymob, Fawry & Stripe with automatic invoice generation |
+| Payments handled off-platform | ✅ Stripe & Fawry payments with status tracking |
 | No trust or verification | ✅ ID-based identity verification for coaches and trainees |
 
 ---
@@ -71,8 +67,8 @@ https://github.com/user-attachments/assets/6d3d23d1-aa7f-47f8-a6a1-7fa7e93582d8
 - Powered by **Llama 3.3** — built from structured coach ratings, no manual input required
 
 ### 💳 Verified Payments
-- Multi-gateway support: **Paymob**, **Fawry**, and **Stripe**
-- Automatic invoice generation and payment verification
+- Two gateways: **Stripe** (cards) and **Fawry** (Egypt)
+- Payment status tracking per booking
 - Secure, in-app transactions — no off-platform cash handling
 
 ### 🛡️ Identity Verification
@@ -109,7 +105,7 @@ https://github.com/user-attachments/assets/6d3d23d1-aa7f-47f8-a6a1-7fa7e93582d8
 - **Groq** — Powers the in-app AI assistant (`/api/ai`) for real-time Q&A
 
 ### Payments & Scheduling
-- **Paymob / Fawry / Stripe** — Multi-gateway payment processing with auto invoice generation
+- **Stripe / Fawry** — Payment processing for card and Egyptian local payments
 - **Google Calendar API** — Schedule sync and session reminders
 
 ### Infrastructure
@@ -130,7 +126,7 @@ Grok AI matches → Best-fit coach suggested
        ↓
 Trainee browses availability → Books a session
        ↓
-Payment processed (Paymob / Fawry / Stripe)
+Payment processed (Stripe / Fawry)
        ↓
 Session confirmed → Calendar invite + reminder
        ↓
@@ -188,8 +184,11 @@ Coach rates trainee → Llama 3.3 generates PDF report
 ### Payments — `/api/v1/payments`
 | Endpoint | Description |
 |----------|-------------|
-| POST `/` | Initiate payment (Paymob / Fawry / Stripe) |
-| GET  `/verify` | Verify payment and confirm booking |
+| POST `/stripe/intent` | Create a Stripe PaymentIntent for a booking (returns `clientSecret`) |
+| POST `/fawry` | Create a Fawry payment reference for a booking (returns `paymentUrl`) |
+| GET  `/booking/:bookingId` | Get payment status for a booking |
+
+> Stripe confirms payments through a signed webhook at `POST /api/v1/webhooks/stripe`, which is called by Stripe only.
 
 ### Reviews — `/api/v1/reviews`
 | Endpoint | Description |
@@ -239,7 +238,7 @@ Coach rates trainee → Llama 3.3 generates PDF report
 | No compatibility check before booking | AI matching on personality + goals |
 | Manual, chat-based scheduling | Integrated booking with auto-reminders |
 | No visibility into trainee progress | AI-generated performance reports |
-| Off-platform, untrusted payments | Verified in-app multi-gateway payments |
+| Off-platform, untrusted payments | Verified in-app payments (Stripe & Fawry) |
 | No trust or accountability | ID verification for all users |
 
 ---
