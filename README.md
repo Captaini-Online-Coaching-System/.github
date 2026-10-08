@@ -23,7 +23,7 @@
 
 ### A two-sided sports coaching marketplace — AI-matched coaches, seamless booking, verified payments, and auto-generated performance reports, all in one platform.
 
-🌐 **Live Website**: [captaini.vercel.app](https://captaini.vercel.app)  &nbsp;|&nbsp;  
+
 <br/><br/>
 
 
